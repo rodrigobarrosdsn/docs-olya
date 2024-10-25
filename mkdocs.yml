@@ -1,0 +1,70 @@
+# mkdocs.yml
+site_name: Olya API Documentation
+site_description: Documentation for Olya API
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+
+# Navigation
+nav:
+  - Home: index.md
+  - Autenticação:
+    - auth/overview.md
+    - auth/login.md
+    - auth/password.md
+  - Usuários:
+    - users/overview.md
+    - users/crud.md
+    - users/profile.md
+    - users/tree.md
+  - Perfis:
+    - profiles/overview.md
+    - profiles/crud.md
+  - Pagamentos:
+    - payments/overview.md
+    - payments/app-store.md
+  - Planos:
+    - plans/overview.md
+    - plans/types.md
+  - Carteira:
+    - wallet/overview.md
+    - wallet/balance.md
+    - wallet/withdrawals.md
+  - Webhooks:
+    - webhooks/overview.md
+    - webhooks/pagarme.md
+    - webhooks/google.md
+    - webhooks/apple.md
